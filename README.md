@@ -27,14 +27,20 @@ Tech requirements (use one of following)
 
 Using 
 
+```
 $ cd "path/backend-task"
 $ npm install
+```
 
+```
 $ npm run dev
+```
 
 or
 
+```
 $ npm run start
+```
 
 For development we use nodemon with:
 > npm run dev
