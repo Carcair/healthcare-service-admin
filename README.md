@@ -25,13 +25,14 @@ Tech requirements (use one of following)
 
 ## Setup
 
-Using 
+Install: 
 
 ```
 $ cd "path/backend-task"
 $ npm install
 ```
 
+Run:
 ```
 $ npm run dev
 ```
