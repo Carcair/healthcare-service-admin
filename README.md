@@ -18,10 +18,17 @@ Client service has a REST api endpoint for listing all teams.
 
 Tech requirements (use one of following)
 * Language: Java/PHP/NodeJS/golang
-* Administration Storage: MySQL, PostgreSQL
-* Client Storage: Redis
+* Administration storage: MySQL, PostgreSQL
+* Client storage: Redis
 * Messaging: RabbitMQ, Kafka
-* Docker and Docker Compose for Storage and Messaging tools.
+* Docker and Docker Compose for storage and messaging tools.
+
+Used:
+* Language: NodeJS,
+* Administration storage: MongoDB (NoSQL database),
+* Client storage: under construction,
+* Messaging: under construction,
+* Docker not used, not enough memory to use it on available PC.
 
 ## Setup
 
