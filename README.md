@@ -35,7 +35,6 @@ Used:
 Install: 
 
 ```
-$ cd "path/backend-task"
 $ npm install
 ```
 
@@ -44,7 +43,7 @@ Run:
 $ npm run dev
 ```
 
-or
+or:
 
 ```
 $ npm run start
@@ -53,5 +52,15 @@ $ npm run start
 For development we use nodemon with:
 > npm run dev
 
-For deployment it's necessary for script command start:
+For production build it's necessary for script command start:
 > npm run start
+
+Endpoints:
+* /api/employees , for employee info
+* /api/teams , for team info
+
+Use Postman to test CRUD operations ( https://www.postman.com/ ).
+
+## Additional info
+
+UI development build not included in repo. Not necessary for studying, it contains basic html boiler plate and css, using Vue.js framework. Production build will be provided.

@@ -8,10 +8,13 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-// 
+// Import routes
 const employees = require('./routes/api/employees');
+const teams = require('./routes/api/teams');
 
+// Redirecting routes
 app.use('/api/employees', employees);
+app.use('/api/teams', teams);
 
 // Port variable
 const port = process.env.PORT || 5000;
