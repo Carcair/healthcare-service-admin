@@ -25,8 +25,8 @@ Tech requirements (use one of following)
 
 Used:
 * Language: NodeJS,
-* Administration storage: MongoDB (NoSQL database),
-* Client storage: under construction,
+* Administration storage: MySQL,
+* Client storage: under construction (planned NoSQL, MongoDB),
 * Messaging: under construction,
 * Docker not used, not enough memory to use it on available PC.
 
