@@ -27,7 +27,7 @@ Used:
 * Language: NodeJS,
 * Administration storage: MySQL,
 * Client storage: under construction (planned NoSQL, MongoDB),
-* Messaging: under construction,
+* Messaging: RabbitMQ,
 * Docker not used, not enough memory to use it on available PC.
 
 ## Setup
