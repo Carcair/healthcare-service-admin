@@ -2,10 +2,10 @@
 
 ## About
 
-Application for health care services. It consists from Administration service and Client service.
+Application for health care services. It consists from Administration service and Client service (pushed on https://github.com/Carcair/healthcare-service-user).
 
 #### Admin service
-Admin service will have REST api with CRUD operations for employees and teams. Teams can have many or none employees and employee can be in more or none teams.
+Admin service will have REST api with endpoints for CRUD operations for employees and teams. Teams can have many or none employees and employee can be in more or none teams.
 There must be routes for:
 * creating and deleting teams,
 * creating and deleting employees,
@@ -26,7 +26,7 @@ Tech requirements (use one of following)
 Used:
 * Language: NodeJS,
 * Administration storage: MySQL,
-* Client storage: under construction (planned NoSQL, MongoDB),
+* Client storage: MongoDB (NoSQL) instead of Redis,
 * Messaging: RabbitMQ,
 * Docker not used, not enough memory to use it on available PC.
 
@@ -49,18 +49,26 @@ or:
 $ npm run start
 ```
 
+RabbitMQ server is at default "amqp://localhost:5672". Necessary to install it or to use Docker image, get started at "https://www.rabbitmq.com/download.html".
+
 For development we use nodemon with:
 > npm run dev
 
 For production build it's necessary for script command start:
 > npm run start
 
+Run locally at port:
+* http://localhost:5000
+
 Endpoints:
 * /api/employees , for employee info
 * /api/teams , for team info
+* /api/teammembers , for teams with members
 
 Use Postman to test CRUD operations ( https://www.postman.com/ ).
 
 ## Additional info
 
-UI development build not included in repo. Not necessary for studying, it contains basic html boiler plate and css, using Vue.js framework. Production build will be provided.
+UI not included. Will add it if necessary.
+
+API's are not hosted, start LOCALLY. Start BOTH API's to fully explore their application.

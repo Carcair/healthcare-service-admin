@@ -5,7 +5,6 @@ const router = express.Router();
 
 // mysql connection
 async function loadConnection() {
-
   const db = await mysql.createConnection({
     host: 'remotemysql.com',
     user: 'IQRryRgf9w',
@@ -23,7 +22,6 @@ async function loadConnection() {
 
 // Get teams
 router.get('/', async (req, res) => {
-
   const db = await loadConnection();
   const sql = "SELECT * FROM teams";
   
@@ -37,7 +35,6 @@ router.get('/', async (req, res) => {
 
 // Add team
 router.post('/', async (req, res) => {
-
   const db = await loadConnection();
   const name = req.body.name;
   const sql = `INSERT INTO teams(team_name) VALUES ('${name}')`;
@@ -52,7 +49,6 @@ router.post('/', async (req, res) => {
 
 // Edit team
 router.put('/:id', async (req, res) => {
-
   const db = await loadConnection();
   const name = req.body.name;
   const sql = `UPDATE teams SET team_name='${name}' WHERE team_id= ${req.params.id}`;
@@ -67,7 +63,6 @@ router.put('/:id', async (req, res) => {
 
 // Delete employee
 router.delete('/:id', async (req, res) => {
-
   const db = await loadConnection();
   const sql = `DELETE FROM teams WHERE team_id = ${req.params.id}`;
   

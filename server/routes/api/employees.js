@@ -4,7 +4,6 @@ const mysql = require('mysql');
 const router = express.Router();
 
 async function loadConnection() {
-
   const db = await mysql.createConnection({
     host: 'remotemysql.com',
     user: 'IQRryRgf9w',
@@ -22,7 +21,6 @@ async function loadConnection() {
 
 // Get employees
 router.get('/', async (req, res) => {
-
   const db = await loadConnection();
   const sql = "SELECT * FROM employees";
 
@@ -36,7 +34,6 @@ router.get('/', async (req, res) => {
 
 // Add employee
 router.post('/', async (req, res) => {
-  
   const db = await loadConnection();
   const name = req.body.name;
   const sql = `INSERT INTO employees(employee_name) VALUES ('${name}')`;
@@ -51,7 +48,6 @@ router.post('/', async (req, res) => {
 
 // Edit employee
 router.put('/:id', async (req, res) => {
-
   const db = await loadConnection();
   const name = req.body.name;
   const sql = `UPDATE employees SET employee_name='${name}' WHERE employee_id= ${req.params.id}`;
